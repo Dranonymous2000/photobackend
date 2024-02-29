@@ -15,6 +15,7 @@ Use App\Http\Controllers\Admin\ArchitectureController;
 Use App\Http\Controllers\Admin\PeopleController;
 Use App\Http\Controllers\Admin\OthersController;
 Use App\Http\Controllers\Admin\ContactController;
+Use App\Http\Controllers\Admin\Client_ReviewController;
 
 
 
@@ -156,6 +157,15 @@ Route::prefix('Others')->group(function(){
     Route::get('/edit/{id}',[OthersController::class, 'EditOthers'])->name('edit.others');
     Route::post('/update/{id}',[OthersController::class, 'UpdateOthers'])->name('update.others');
     Route::get('/delete/{id}',[OthersController::class, 'DeleteOthers'])->name('delete.others');
+});
+
+Route::prefix('ClientReview')->group(function(){
+    Route::get('/list/clientreview',[Client_ReviewController::class, 'AllClientReview'])->name('list.review');
+    Route::get('/add/clientreview',[Client_ReviewController::class, 'AddClientReview'])->name('add.review');
+    Route::post('/store',[Client_ReviewController::class, 'StoreClientReview'])->name('review.store');
+    Route::get('/edit/{id}',[Client_ReviewController::class, 'EditClientReview'])->name('edit.review');
+    Route::post('/update/{id}',[Client_ReviewController::class, 'UpdateClientReview'])->name('update.review');
+    Route::get('/delete/{id}',[Client_ReviewController::class, 'DeleteClientReview'])->name('delete.review');
 });
 
 Route::prefix('Contact')->group(function(){

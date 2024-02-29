@@ -261,6 +261,27 @@
   </ul>
 </li>
 
+<li class="nav-item">
+  <a class="nav-link collapsed" data-bs-toggle="collapse" href="#subscribers-nav">
+      <i class="bi bi-telephone"></i><span>Client Revies</span><i class="bi bi-chevron-down ms-auto"></i>
+  </a>
+  <ul id="subscribers-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+      <li>
+          <a href="{{route('list.review')}}">
+              <i class="bi bi-circle"></i><span>List Review</span>
+          </a>
+      </li>
+      <li>
+        <a href="{{route('add.review')}}">
+            <i class="bi bi-circle"></i><span>Add Review</span>
+        </a>
+    </li>
+  </ul>
+</li>
+
+    </ul><!-- End Sidebar Nav -->
+
+
     
 
 

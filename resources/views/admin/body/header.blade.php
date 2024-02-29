@@ -36,11 +36,16 @@
          
         <!-- End Messages Nav -->
 
-        
+        @php
+
+        $id = Auth::user()->id;
+        $user= App\Models\User::find($id);
+            
+        @endphp
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="{{ (!empty($user->profile_photo_path))?url('upload/user_images/'.$user->profile_photo_path):url('upload/no_image.jpg')}}" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block ps-2">Pooja Media</span>
+            <span class="d-none d-md-block ps-2">{{$user->name}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <!-- End Profile Dropdown Items -->
