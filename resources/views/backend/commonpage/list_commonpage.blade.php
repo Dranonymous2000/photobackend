@@ -55,7 +55,7 @@
                         <td>
                             <div class="d-flex">
                                 <a href=" {{route('edit.commonpage', $item->id )}} " class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i>Edit</a>
-                                <a href="{{route('delete.commonpage', $item->id)}}" class="btn btn-danger shadow btn-xs sharp">Delete</a>
+                                <a href="{{route('delete.commonpage', $item->id)}}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger shadow btn-xs sharp">Delete</a>
                             </div>
                         </td>
                     </tr>
